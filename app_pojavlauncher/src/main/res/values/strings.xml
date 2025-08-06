@@ -158,6 +158,11 @@
     <string name="main_share_logs">Share log file</string>
     <string name="main_install_jar_file">Execute a .jar</string>
     <string name="main_play">Play</string>
+    <string name="auto_ram_title">Auto RAM</string>
+    <string name="auto_ram_subtitle">Enables automatic RAM adjuster</string>
+    <string name="auto_ram_dis_arg_warn">Attention! Auto RAM allocation is disabled"</string>
+    <string name="auto_ram_dis_arg_notif">The values "-Xms" and "-Xmx" must be set in "JVM Launch arguments"</string>
+    <string name="auto_ram_dis_msg">Unstable! Auto RAM disabled</string>
     <string name="autoram_info_msg">Memory set to %d MB</string>
     <string name="mcl_setting_check_libraries">Check libraries after downloading</string>
     <string name="mcl_setting_check_libraries_subtitle">This option forces the launcher to check the library hash if it\'s available. Prevents broken downloads.</string>
@@ -275,6 +280,7 @@
     <string name="storage_required">MojoLauncher requires external storage to be attached. Please reconnect it and restart the app.</string>
     <string name="mcl_setting_title_buttonallcaps">Only use capital letters in button labels</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Disable this if you want to use lowercase letters in your controls.</string>
+    <string name="create_profile">Create new profile</string>
     <string name="create_instance">Create new instance</string>
     <string name="preference_shader_dump_title">Enable shader dumping</string>
     <string name="preference_shader_dump_description">Log converted shaders into the log file.</string>
