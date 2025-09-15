@@ -2,27 +2,30 @@ package net.kdt.pojavlaunch;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
-import android.app.*;
-import android.content.*;
-import android.content.pm.*;
-import android.content.res.*;
-import android.os.*;
-import androidx.core.app.*;
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.os.Build;
+import android.util.Log;
 
-import android.util.*;
-import java.io.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import androidx.core.app.ActivityCompat;
 
 import net.kdt.pojavlaunch.lifecycle.ContextExecutor;
 import net.kdt.pojavlaunch.prefs.LauncherPreferences;
 import net.kdt.pojavlaunch.tasks.AsyncAssetManager;
-import net.kdt.pojavlaunch.utils.*;
 import net.kdt.pojavlaunch.utils.FileUtils;
+import net.kdt.pojavlaunch.utils.LocaleUtils;
+
+import java.io.File;
+import java.io.PrintStream;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import git.artdeell.mojo.BuildConfig;
 

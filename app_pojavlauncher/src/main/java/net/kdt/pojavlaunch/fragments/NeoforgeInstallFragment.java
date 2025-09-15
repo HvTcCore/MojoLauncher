@@ -4,14 +4,14 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import git.artdeell.mojo.R;
-
 import net.kdt.pojavlaunch.modloaders.ForgelikeUtils;
 
-public class ForgeInstallFragment extends ForgelikeInstallFragment {
-    public static final String TAG = "ForgeInstallFragment";
-    public ForgeInstallFragment() {
-        super(ForgelikeUtils.FORGE_UTILS, TAG);
+import git.artdeell.mojo.R;
+
+public class NeoforgeInstallFragment extends ForgelikeInstallFragment {
+    public static final String TAG = "NeoforgeInstallFragment";
+    public NeoforgeInstallFragment() {
+        super(ForgelikeUtils.NEOFORGE_UTILS, TAG);
     }
 
     @Override
@@ -21,11 +21,11 @@ public class ForgeInstallFragment extends ForgelikeInstallFragment {
 
     @Override
     public int getTitleText() {
-        return R.string.forge_dl_select_version;
+        return R.string.neoforge_dl_select_version;
     }
 
     @Override
     public int getNoDataMsg() {
-        return R.string.forge_dl_no_installer;
+        return R.string.neoforge_dl_no_installer;
     }
 }

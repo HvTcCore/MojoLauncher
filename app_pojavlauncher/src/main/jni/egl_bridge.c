@@ -38,7 +38,6 @@
 // This means that you are forced to have this function/variable for ABI compatibility
 #define ABI_COMPAT __attribute__((unused))
 
-
 struct PotatoBridge {
 
     /* EGLContext */ void* eglContext;
@@ -54,10 +53,13 @@ struct PotatoBridge potatoBridge;
 
 #include "ctxbridges/egl_loader.h"
 #include "ctxbridges/osmesa_loader.h"
+#include "linkedlist.h"
 
 #define RENDERER_GL4ES 1
 #define RENDERER_VK_ZINK 2
 #define RENDERER_VULKAN 4
+
+extern void destroyAllCursors();
 
 EXTERNAL_API void pojavTerminate() {
     printf("EGLBridge: Terminating\n");
@@ -80,6 +82,8 @@ EXTERNAL_API void pojavTerminate() {
             // Nothing to do here
         } break;
     }
+
+    destroyAllCursors();
 }
 
 JNIEXPORT void JNICALL Java_net_kdt_pojavlaunch_utils_JREUtils_setupBridgeWindow(JNIEnv* env, ABI_COMPAT jclass clazz, jobject surface) {
@@ -248,4 +252,3 @@ Java_org_lwjgl_vulkan_VK_getVulkanDriverHandle(ABI_COMPAT JNIEnv *env, ABI_COMPA
 EXTERNAL_API void pojavSwapInterval(int interval) {
     br_swap_interval(interval);
 }
-
